@@ -63,7 +63,7 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.attachNode(audioPlayerNode)
 
         var reverb = AVAudioUnitReverb()
-        reverb.loadFactoryPreset(AVAudioUnitReverbPreset.SmallRoom)
+        reverb.loadFactoryPreset(AVAudioUnitReverbPreset.LargeHall)
         reverb.wetDryMix = 50
         audioEngine.attachNode(reverb)
 
