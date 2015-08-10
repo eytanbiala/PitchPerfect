@@ -52,12 +52,12 @@ class PlaySoundsViewController: UIViewController {
     func stopAudio() {
         audioPlayer.stop()
         audioPlayer2.stop()
+        audioEngine.stop()
+        audioEngine.reset()
     }
 
     @IBAction func playReverb(sender: AnyObject) {
         stopAudio()
-
-        audioEngine.reset()
 
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -100,8 +100,6 @@ class PlaySoundsViewController: UIViewController {
 
     func playAudioWithVariablePitch(pitch: Float){
         stopAudio()
-
-        audioEngine.reset()
 
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
